@@ -31,7 +31,7 @@ function isUserAuthenticated(req, res, next) {
     res.redirect('/');
   }
 }
-
+//test to see if git remote works to forked repo
 // configure routes to our server
 server.get('/', (req, res) =>
   res.status(200).send({ Success: 'Sanity check is working...' })
