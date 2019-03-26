@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './mappedItem.css';
+import './MappedItem.css';
 import { Col } from 'reactstrap';
-import { tmdbUrl } from '../../services/resourceURLs';
+import { tmdbUrl } from '../../../services/resourceURLs';
 
 const MappedItem = props => {
   return (

@@ -1,9 +1,9 @@
 import React from 'react';
-import Hero from './Hero/Hero';
-import MappedItem from './MappedItem';
+import Hero from './hero/Hero';
+import MappedItem from './mappedItem/MappedItem';
 import { Row } from 'reactstrap';
-import './mappedItem.css';
-import FeatureList from './FeatureList20';
+import './mappedItem/MappedItem.css';
+import FeatureList from './featurelist/FeatureList20';
 
 const Home = props => {
 

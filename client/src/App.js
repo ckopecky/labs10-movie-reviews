@@ -4,7 +4,7 @@ import axios from 'axios';
 import { theMovieDbUrl } from './services/resourceURLs';
 import { tmdbUrl } from './services/resourceURLs';
 import About from './components/footer/about/About';
-import Auth from './components/DummyAuth/Auth';
+import Auth from './components/dummyAuth/Auth';
 import Contact from './components/footer/contact/Contact';
 import Dummyusers from './components/dummyuser/DummyUser';
 import Footer from './components/footer/Footer';
@@ -16,7 +16,7 @@ import PremiumView from './components/premium/PremiumView';
 import Privacy from './components/footer/privacy/PrivacyPolicy';
 import ratingStars from './components/stars/ratingStars';
 import ReviewForm from './components/myReviews/ReviewForm';
-import SearchResults from './components/home/Hero/SearchResults';
+import SearchResults from './components/home/hero/SearchResults';
 import Terms from './components/footer/terms/Terms';
 import './App.css';
 

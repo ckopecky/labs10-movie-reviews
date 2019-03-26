@@ -1,5 +1,5 @@
 import React from 'react';
-import { unsplashUrl } from '../../services/resourceURLs';
+import { unsplashUrl } from '../../../services/resourceURLs';
 
 const Jumbotron = props => {
   return (
