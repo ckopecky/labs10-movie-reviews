@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Route, Switch } from 'react-router-dom';
+import { Spinner } from 'reactstrap';
 import axios from 'axios';
 import { theMovieDbUrl } from './services/resourceURLs';
 import { tmdbUrl } from './services/resourceURLs';
@@ -158,8 +159,8 @@ class App extends Component {
     const { loading } = this.state;
     if (loading) {
       return (
-        <div>
-          <h1>Loading...</h1>
+        <div style={{height: "100vh", width: "100%", padding: "30px"}}>
+          <Spinner color="rgb(70, 78, 125)" />
         </div>
       );
     }
