@@ -17,7 +17,7 @@ import PremiumView from './components/premium/PremiumView';
 import Privacy from './components/footer/privacy/PrivacyPolicy';
 import ratingStars from './components/stars/ratingStars';
 import ReviewForm from './components/myReviews/ReviewForm';
-import SearchResults from './components/home/hero/SearchResults';
+import Search from './components/home/hero/Search';
 import Terms from './components/footer/terms/Terms';
 import './App.css';
 
@@ -35,6 +35,7 @@ class App extends Component {
       inputCriteria: '',
       searchCriteria: '',
       searchResults: [],
+      searchInput: '',
       loading: true
     };
     //these are bound because I am not using arrow functions
@@ -133,18 +134,16 @@ class App extends Component {
 
     promise
       .then(response => {
+        const searchInput = this.state.searchCriteria || this.state.inputCriteria;
+        // console.log(searchInput, "searchCriteria in response")
+        // console.log(response, "promise response");
         this.setState({ loading: true });
-        const resultLength = () => {
-          if (response.data.results.length === 0) {
-            return 0;
-          } else return response.data.results.length;
-        };
         this.setState({
           searchResults: response.data.results,
-          resultLength: resultLength(),
           loading: false,
           searchCriteria: '',
-          inputCriteria: ''
+          inputCriteria: '',
+          searchInput: searchInput
         });
         //this sets the searchResults on state
       })
@@ -155,7 +154,7 @@ class App extends Component {
 
   render() {
     //loading state keeps static HTML from showing
-
+    console.log(this.state, "this.state App")
     const { loading } = this.state;
     if (loading) {
       return (
@@ -205,7 +204,7 @@ class App extends Component {
             <Route
               path={`/search`}
               render={props => (
-                <SearchResults
+                <Search
                   {...props}
                   movies={this.state.movies}
                   loading={this.state.loading}
@@ -216,6 +215,8 @@ class App extends Component {
                   searchHandler={this.searchHandler}
                   searchResults={this.state.searchResults}
                   searchCriteria={this.state.searchCriteria}
+                  searchInput={this.state.searchInput}
+                  headerLabel="Search Results for "
                 />
               )}
             />
