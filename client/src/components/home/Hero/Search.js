@@ -5,11 +5,13 @@ import './Hero.css';
 
 const Search = props => {
     return (
-      <div className={props.className}>
+      <div className="search">
         <SearchQueryHeader
           headerLabel={props.headerLabel}
           resultLength={props.resultLength}
           searchCriteria={props.searchCriteria}
+          searchInput={props.searchInput}
+          searchResults={props.searchResults}
         />
         <SearchResults
           resultLength={props.resultLength}
