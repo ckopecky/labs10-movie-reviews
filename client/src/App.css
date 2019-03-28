@@ -4,8 +4,12 @@
   display:flex;
   flex-direction:column;
   justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
   min-height: 100vh;
   height: 100%;
+  max-width: 1800px;
+  width: 100%;
 }
 
 .main {
@@ -24,12 +28,6 @@
   margin-bottom: 0px;
   background-color: rgb(237, 237, 237);
 
-}
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
 }
 
 .App-header {
